@@ -1,0 +1,32 @@
+---
+title: OPAL
+description: Operations, Procedures, Assets, Logistics. A local-first system for hardware teams.
+template: splash
+hero:
+  tagline: Parts, stock, purchasing, procedures and their execution, issues, risks and requirements. One binary and one SQLite file, served on your local network.
+  actions:
+    - text: Install
+      link: start/install/
+      icon: right-arrow
+    - text: GitHub
+      link: https://github.com/amorphous-engineering/OPAL
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid>
+	<Card title="One binary" icon="rocket">
+		Download one file for macOS, Linux or Windows. It holds the server and the web client.
+	</Card>
+	<Card title="One database" icon="document">
+		All data is in one SQLite file on your computer. Copy the file to back it up.
+	</Card>
+	<Card title="Your network" icon="laptop">
+		The server listens on port 8080. People on the local network use it in a browser.
+	</Card>
+	<Card title="Agents" icon="puzzle">
+		Operations are also MCP tools, so Claude Code can read and change records with an API token.
+	</Card>
+</CardGrid>

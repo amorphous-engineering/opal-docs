@@ -33,7 +33,13 @@ Use this for scripts and for clients that cannot sign in.
 
 ## Behind a reverse proxy
 
-Sign-in needs OPAL to know its public URL. Set `OPAL_TRUST_PROXY=1` when a proxy such as Caddy or nginx terminates TLS. OPAL then reads `X-Forwarded-Proto` and `X-Forwarded-Host`.
+Sign-in needs OPAL to know its public URL. When a proxy such as Caddy or nginx terminates TLS, set `OPAL_PUBLIC_URL` to the URL people use:
+
+```ini
+Environment=OPAL_PUBLIC_URL=https://opal.example.com
+```
+
+SSO sign-in uses the same URL for its callback.
 
 ## Limits
 
